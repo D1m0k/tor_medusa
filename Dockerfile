@@ -11,6 +11,7 @@ RUN apk update \
  WORKDIR /
  COPY start.py proxy-list.py /
  COPY proxy/ /proxy
+ COPY config.py .
  COPY templates/ /templates
  RUN chmod +x *.py
  EXPOSE 1080/tcp 2090/tcp 8800/tcp 8888/tcp
